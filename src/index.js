@@ -8,5 +8,6 @@ export function fetchCatByBreed(breedId){
     .get(`${BASE_URL}/images/search?breed_ids=${breedId}`)
     .then(Response => {
         return Response.data;
-    })
+    });
 }
+fetchBreeds().then(consol.log);
