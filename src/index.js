@@ -12,5 +12,5 @@ export function fetchCatByBreed(breedId){
     });
 }
 fetchBreeds().then(consol.log);
-// import SlimSelect from 'slim-select';
-// import 'slim-select/dist/slimselect.css';
+import SlimSelect from 'slim-select';
+import 'slim-select/dist/slimselect.css';
