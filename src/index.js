@@ -7,7 +7,7 @@ export function fetchBreeds() {
 }
 export function fetchCatByBreed(breedId){
     return axios
-    .get(`${BASE_URL}/images/search?breed_ids=${breedId}`)
+    .get(`${BASE_URL}/images/search?breed_id=${breedId}`)
     .then(Response => {
         return Response.data;
     });
