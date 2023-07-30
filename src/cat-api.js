@@ -1,4 +1,4 @@
-const url = 'https://api.thecatapi.com/v1';
+const url = 'https://api.thecatapi.com/v1/images/search';
 axios.defaults.common['x-api-key'] ='live_0OHVSrZmYOum5F9rOfmcgMp6UIbUTa5AQtDZVhO6MZ85hNASRodSA4IbSKDrBp2Z';
 
 export function fetchBreeds() {
