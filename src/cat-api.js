@@ -1,5 +1,5 @@
 const url = 'https://api.thecatapi.com/v1';
-const api_key ='live_0OHVSrZmYOum5F9rOfmcgMp6UIbUTa5AQtDZVhO6MZ85hNASRodSA4IbSKDrBp2Z';
+axios.defaults.common['x-api-key'] ='live_0OHVSrZmYOum5F9rOfmcgMp6UIbUTa5AQtDZVhO6MZ85hNASRodSA4IbSKDrBp2Z';
 
 export function fetchBreeds() {
     return fetch(`${url}/breeds?api_key=${api_key}`)
@@ -20,3 +20,4 @@ export function fetchCatByBreed(breedId) {
             return response.json();
         });  
 };
+
