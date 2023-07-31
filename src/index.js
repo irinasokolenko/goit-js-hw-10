@@ -4,7 +4,7 @@ import { fetchBreeds, fetchCatByBreed } from "./cat-api";
 import './styles.css';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import SlimSelect from 'slim-select'
-const new SlimSelect({
+const = new SlimSelect({
     select: '#selectElement'
   });
 
