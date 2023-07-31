@@ -1,5 +1,12 @@
-const url = 'https://api.thecatapi.com/v1/images/search';
-axios.defaults.common['x-api-key'] ='live_0OHVSrZmYOum5F9rOfmcgMp6UIbUTa5AQtDZVhO6MZ85hNASRodSA4IbSKDrBp2Z';
+
+const url = 'https://api.thecatapi.com/v1';
+const api_key ='live_0OHVSrZmYOum5F9rOfmcgMp6UIbUTa5AQtDZVhO6MZ85hNASRodSA4IbSKDrBp2Z';
+const options = {
+    method: 'GET',
+    heders: {
+        'x-api-key': api_key,
+    },
+    };
 
 export function fetchBreeds() {
     return fetch(`${url}/breeds?api_key=${api_key}`)
