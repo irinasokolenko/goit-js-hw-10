@@ -15,30 +15,30 @@ loader.classList.replace('loader', 'is-hidden');
 error.classList.add('is-hidden');
 divCatInfo.classList.add('is-hidden');
 ref.selector?.classList.add('is-hidden');
-let arrBreedsId = [];
+// let arrBreedsId = [];
 
+fetchBreeds()
+  const arrBreedsId = fetchBreeds.map( option => text: element.name, value: element.id)
+  selectCatInfo.innerHTML = `<select class="breed-select"><option data-placeholder="true"></option></select><img src="${url}" alt="${breeds[0].name}" width="400"/></div><div class="box"><h1>${breeds[0].name}</h1><p>${breeds[0].description}</p><p><b>Temperament:</b> ${breeds[0].temperament}</p></div>`;
+  option data-placeholder.classList.remove('is-hidden');
+})
 
+.catch(onFetchError);
+}
 
-// fetchBreeds.map((data, index, array) => {
-//     arrBreedsId.push({ text: element.name, value: element.id });
+// fetchBreeds()
+//   .then(data => {
+//     data.forEach(element => {
+//       arrBreedsId.push({ text: element.name, value: element.id });
 //     });
 //     new SlimSelect({
 //       select: ref.selector,
 //       data: arrBreedsId,
 //     });
-
+//   })
 //   .catch(onFetchError);
-// const fetchBreeds = document.querySelector(".list");
 
-// const newarrBreedsId = [text: element.name, value: element.id];
-// const markup = newarrBreedsId
-//   .map((warrBreedsId) => `<select class="breed-select"">${newarrBreedsId}</select>`)
-//   .join("");
-
-// list.insertAdjacentHTML(text: element.name, value: element.id);
-// //list.insertAdjacentHTML("beforebegin", "<h2>Popular technologies</h2>");
-
-
+// let first = true;
 
 selector.addEventListener('change', onSelectBreed);
 
@@ -59,19 +59,7 @@ function onSelectBreed(event) {
     })
     .catch(onFetchError);
 }
-fetchBreeds()
-  .then(data => {
-    data.forEach(element => {
-      arrBreedsId.push({ text: element.name, value: element.id });
-    });
-    new SlimSelect({
-      select: ref.selector,
-      data: arrBreedsId,
-    });
-  })
-  .catch(onFetchError);
 
-let first = true;
 function onFetchError(error) {
   selector.classList.remove('is-hidden');
   loader.classList.replace('loader', 'is-hidden');
