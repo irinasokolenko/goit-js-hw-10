@@ -39,11 +39,11 @@ let arrBreedsId = [];
 //     });
 
 //   .catch(onFetchError);
-const list = document.querySelector(".list");
+const fetchBreeds = document.querySelector(".list");
 
-const newTechnologies = ["React", "TypeScript", "Node.js"];
-const markup = newTechnologies
-  .map((technology) => `<li class="list-item new">${technology}</li>`)
+const newarrBreedsId = [text: element.name, value: element.id];
+const markup = newarrBreedsId
+  .map((warrBreedsId) => `<select class="breed-select"">${newarrBreedsId}</select>`)
   .join("");
 
 list.insertAdjacentHTML("beforeend", markup);
