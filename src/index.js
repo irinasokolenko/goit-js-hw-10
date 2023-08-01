@@ -17,19 +17,7 @@ divCatInfo.classList.add('is-hidden');
 ref.selector?.classList.add('is-hidden');
 let arrBreedsId = [];
 
-fetchBreeds()
-  .then(data => {
-    data.forEach(element => {
-      arrBreedsId.push({ text: element.name, value: element.id });
-    });
-    new SlimSelect({
-      select: ref.selector,
-      data: arrBreedsId,
-    });
-  })
-  .catch(onFetchError);
 
-let first = true;
 
 // fetchBreeds.map((data, index, array) => {
 //     arrBreedsId.push({ text: element.name, value: element.id });
@@ -71,7 +59,19 @@ function onSelectBreed(event) {
     })
     .catch(onFetchError);
 }
+fetchBreeds()
+  .then(data => {
+    data.forEach(element => {
+      arrBreedsId.push({ text: element.name, value: element.id });
+    });
+    new SlimSelect({
+      select: ref.selector,
+      data: arrBreedsId,
+    });
+  })
+  .catch(onFetchError);
 
+let first = true;
 function onFetchError(error) {
   selector.classList.remove('is-hidden');
   loader.classList.replace('loader', 'is-hidden');
