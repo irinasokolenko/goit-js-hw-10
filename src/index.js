@@ -28,7 +28,43 @@ fetchBreeds()
     });
   })
   .catch(onFetchError);
+//
+//   new SlimSelect({
+//     select: '#placeholder',
+//     settings: {
+//       placeholderText: 'Custom Placeholder Text',
+//     }
+//   })
+//   const elems = document.querySelectorAll('select option:checked');
+// const values = Array.prototype.map.call(elems, ({ value }) => value);
   //refs.gallery.innerHTML = '';
+// 
+//   const fetchBreeds = document.querySelector('.gallery');
+//   const itemsMarkup = fetchBreedsItemsMarkup(galleryItems);
+//   galleryContainer.insertAdjacentHTML('beforeend', itemsMarkup);
+  
+  
+//   function createGalleryItemsMarkup(items) {
+//     return items.map(({ preview, original, description }) => {
+//       return `
+//     <a class="gallery__item" href="${original}">
+//       <img
+//         class="gallery__image"
+//         src="${preview}"
+//         alt="${description}"
+//       />
+//     </a>
+//   `
+//     }).join('');
+//   }
+  
+
+
+
+
+
+
+
 
 let first = true;
 
