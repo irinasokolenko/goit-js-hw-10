@@ -28,7 +28,7 @@ fetchBreeds()
     });
   })
   .catch(onFetchError);
-  refs.gallery.innerHTML = '';
+  //refs.gallery.innerHTML = '';
 
 let first = true;
 
