@@ -18,27 +18,18 @@ ref.selector?.classList.add('is-hidden');
 // let arrBreedsId = [];
 
 fetchBreeds()
-  const arrBreedsId = fetchBreeds.map( option => text: element.name, value: element.id)
-  selectCatInfo.innerHTML = `<select class="breed-select"><option data-placeholder="true"></option></select><img src="${url}" alt="${breeds[0].name}" width="400"/></div><div class="box"><h1>${breeds[0].name}</h1><p>${breeds[0].description}</p><p><b>Temperament:</b> ${breeds[0].temperament}</p></div>`;
-  option data-placeholder.classList.remove('is-hidden');
-})
+  .then(data => {
+    data.forEach(element => {
+      arrBreedsId.push({ text: element.name, value: element.id });
+    });
+    new SlimSelect({
+      select: ref.selector,
+      data: arrBreedsId,
+    });
+  })
+  .catch(onFetchError);
 
-.catch(onFetchError);
-}
-
-// fetchBreeds()
-//   .then(data => {
-//     data.forEach(element => {
-//       arrBreedsId.push({ text: element.name, value: element.id });
-//     });
-//     new SlimSelect({
-//       select: ref.selector,
-//       data: arrBreedsId,
-//     });
-//   })
-//   .catch(onFetchError);
-
-// let first = true;
+let first = true;
 
 selector.addEventListener('change', onSelectBreed);
 
