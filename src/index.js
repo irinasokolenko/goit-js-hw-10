@@ -17,19 +17,20 @@ divCatInfo.classList.add('is-hidden');
 ref.selector?.classList.add('is-hidden');
 let arrBreedsId = [];
 
-// fetchBreeds()
-//   .then(data => {
-//     data.forEach(element => {
-//       arrBreedsId.push({ text: element.name, value: element.id });
-//     });
-//     new SlimSelect({
-//       select: ref.selector,
-//       data: arrBreedsId,
-//     });
-//   })
-//   .catch(onFetchError);
+fetchBreeds()
+  .then(data => {
+    data.forEach(element => {
+      arrBreedsId.push({ text: element.name, value: element.id });
+    });
+    new SlimSelect({
+      select: ref.selector,
+      data: arrBreedsId,
+    });
+  })
+  .catch(onFetchError);
 
-// let first = true;
+let first = true;
+
 // fetchBreeds.map((data, index, array) => {
 //     arrBreedsId.push({ text: element.name, value: element.id });
 //     });
@@ -39,15 +40,15 @@ let arrBreedsId = [];
 //     });
 
 //   .catch(onFetchError);
-const fetchBreeds = document.querySelector(".list");
+// const fetchBreeds = document.querySelector(".list");
 
-const newarrBreedsId = [text: element.name, value: element.id];
-const markup = newarrBreedsId
-  .map((warrBreedsId) => `<select class="breed-select"">${newarrBreedsId}</select>`)
-  .join("");
+// const newarrBreedsId = [text: element.name, value: element.id];
+// const markup = newarrBreedsId
+//   .map((warrBreedsId) => `<select class="breed-select"">${newarrBreedsId}</select>`)
+//   .join("");
 
-list.insertAdjacentHTML("beforeend", markup);
-list.insertAdjacentHTML("beforebegin", "<h2>Popular technologies</h2>");
+// list.insertAdjacentHTML(text: element.name, value: element.id);
+// //list.insertAdjacentHTML("beforebegin", "<h2>Popular technologies</h2>");
 
 
 
