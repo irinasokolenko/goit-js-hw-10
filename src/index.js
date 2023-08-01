@@ -39,6 +39,17 @@ let arrBreedsId = [];
 //     });
 
 //   .catch(onFetchError);
+const fetchBreeds = document.querySelector(".fetch");
+
+const newarrBreedsId = [text: element.name, value: element.id ];
+const markup = newarrBreedsId
+  .map((newarrBreedsId) => `<li class="list-item new">${BreedsId}</li>`)
+  .join("");
+
+  fetch.insertAdjacentHTML("BreedsId", markup);
+
+
+
 
 
 selector.addEventListener('change', onSelectBreed);
