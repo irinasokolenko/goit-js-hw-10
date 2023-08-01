@@ -39,16 +39,15 @@ let arrBreedsId = [];
 //     });
 
 //   .catch(onFetchError);
-const fetchBreeds = document.querySelector(".fetch");
+const list = document.querySelector(".list");
 
-const newarrBreedsId = [text: element.name, value: element.id ];
-const markup = newarrBreedsId
-  .map((newarrBreedsId) => `<li class="list-item new">${BreedsId}</li>`)
+const newTechnologies = ["React", "TypeScript", "Node.js"];
+const markup = newTechnologies
+  .map((technology) => `<li class="list-item new">${technology}</li>`)
   .join("");
 
-  fetch.insertAdjacentHTML("BreedsId", markup);
-
-
+list.insertAdjacentHTML("beforeend", markup);
+list.insertAdjacentHTML("beforebegin", "<h2>Popular technologies</h2>");
 
 
 
