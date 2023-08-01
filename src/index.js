@@ -15,7 +15,7 @@ loader.classList.replace('loader', 'is-hidden');
 error.classList.add('is-hidden');
 divCatInfo.classList.add('is-hidden');
 ref.selector?.classList.add('is-hidden');
-// let arrBreedsId = [];
+let arrBreedsId = [];
 
 fetchBreeds()
   .then(data => {
@@ -28,6 +28,7 @@ fetchBreeds()
     });
   })
   .catch(onFetchError);
+  refs.gallery.innerHTML = '';
 
 let first = true;
 
