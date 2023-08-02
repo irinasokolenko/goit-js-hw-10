@@ -14,29 +14,20 @@ const { selector, divCatInfo, loader, error } = ref;
 loader.classList.replace('loader', 'is-hidden');
 error.classList.add('is-hidden');
 divCatInfo.classList.add('is-hidden');
-ref.selector.classList.add('loader');
+ref.selector?.classList.add('is-hidden');
 let arrBreedsId = [];
 
-function arrBreedsId(data) {
-  return data
-  .map(({ id, name }) => `<option value=${id}>${name}</option`)
-  .join('');
-}
-function loadBreeds() {
-  loader.classList.remove('hide');
-}
-
-return fetchBreeds()
-  .then(({data}) => {
-    breedSelectRef.classList.remove('hide');
-      breedSelectRef.innerHTML = markupOptions(data);
-        new SlimSelect({
-      select: breedSelectRef,
-      settings: {},
+fetchBreeds()
+  .then(data => {
+    data.forEach(element => {
+      arrBreedsId.push({ text: element.name, value: element.id });
+    });
+    new SlimSelect({
+      select: ref.selector,
+      data: arrBreedsId,
     });
   })
   .catch(onFetchError);
-
 
 let first = true;
 
