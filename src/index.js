@@ -20,7 +20,7 @@ let arrBreedsId = [];
 fetchBreeds()
   .then(data => {
     data.forEach(element => {
-      arrBreedsId.map( option => {text: element.name, value: element.id });
+      arrBreedsId.push({ text: element.name, value: element.id });
     });
     new SlimSelect({
       select: ref.selector,
@@ -28,7 +28,6 @@ fetchBreeds()
     });
   })
   .catch(onFetchError);
-  
 //
 //   new SlimSelect({
 //     select: '#placeholder',
