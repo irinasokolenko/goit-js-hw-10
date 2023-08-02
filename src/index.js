@@ -24,7 +24,7 @@ function arrBreedsId(data) {
 }
 function loadBreeds() {
   loader.classList.remove('hide');
-
+}
 
 return fetchBreeds()
   .then(({data}) => {
@@ -34,7 +34,7 @@ return fetchBreeds()
       select: breedSelectRef,
       settings: {},
     });
-  })}
+  })
   .catch(onFetchError);
 
 
