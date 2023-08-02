@@ -15,11 +15,11 @@ loader.classList.replace('loader', 'is-hidden');
 error.classList.add('is-hidden');
 divCatInfo.classList.add('is-hidden');
 ref.selector.classList.add('loader');
-let arrBreedsId = [];
+//let arrBreedsId = [];
 
 function arrBreedsId(data) {
   return data
-  .map(({ id, element.name }) => `<option value=${id}>${element.name}</option`)
+  .map(({ id, name }) => `<option value=${id}>${name}</option`)
   .join('');
 }
 function loadBreeds() {
