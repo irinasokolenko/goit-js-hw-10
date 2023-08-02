@@ -24,10 +24,10 @@ function arrBreedsId(data) {
 }
 
 fetchBreeds()
-  .then(data => {
-    data.forEach(element => {
-      arrBreedsId.push({ text: element.name, value: element.id });
-    });
+  // .then(data => {
+  //   data.forEach(element => {
+  //     arrBreedsId.push({ text: element.name, value: element.id });
+  //   });
     new SlimSelect({
       select: ref.selector,
       data: arrBreedsId,
