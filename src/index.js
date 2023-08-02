@@ -17,71 +17,18 @@ divCatInfo.classList.add('is-hidden');
 ref.selector?.classList.add('is-hidden');
 let arrBreedsId = [];
 
-// fetchBreeds()
-//   .then(data => {
-//     data.forEach(element => {
-//       arrBreedsId.push({ text: element.name, value: element.id });
-//     });
-//     new SlimSelect({
-//       select: ref.selector,
-//       data: arrBreedsId,
-//     });
-//   })
-//   .catch(onFetchError);
-
-
-  function fetchBreeds(){
-    return data.map({ text: element.name, value: element.id  });
-    {
-            return `
-            <option data-placeholder="true"></option>`};
-            new SlimSelect({
-                    select: ref.selector,
-                    data: arrBreedsId,
-                  });
-                })
-                .catch(onFetchError);
-        
-          }).join('');
-        
-  
-
-//   new SlimSelect({
-//     select: '#placeholder',
-//     settings: {
-//       placeholderText: 'Custom Placeholder Text',
-//     }
-//   })
-//   const elems = document.querySelectorAll('select option:checked');
-// const values = Array.prototype.map.call(elems, ({ value }) => value);
-  //refs.gallery.innerHTML = '';
-// 
-//   const fetchBreeds = document.querySelector('.gallery');
-//   const itemsMarkup = fetchBreedsItemsMarkup(galleryItems);
-//   galleryContainer.insertAdjacentHTML('beforeend', itemsMarkup);
-  
-  
-//   function createGalleryItemsMarkup(items) {
-//     return items.map(({ preview, original, description }) => {
-//       return `
-//     <a class="gallery__item" href="${original}">
-//       <img
-//         class="gallery__image"
-//         src="${preview}"
-//         alt="${description}"
-//       />
-//     </a>
-//   `
-//     }).join('');
-//   }
-  
-
-
-
-
-
-
-
+fetchBreeds()
+  .then(data => {
+    data.forEach(element => {
+      arrBreedsId.push({ text: element.name, value: element.id });
+    });
+    new SlimSelect({
+      select: ref.selector,
+      data: arrBreedsId,
+    });
+  })
+  .catch(onFetchError);
+  insertAdjacentHTML(fetchBreeds, BeforeUnloadEvent);
 
 let first = true;
 
