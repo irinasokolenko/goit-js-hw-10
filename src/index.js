@@ -32,13 +32,18 @@ let arrBreedsId = [];
 
   function fetchBreeds(){
     return data.map({ text: element.name, value: element.id  });
-      return `<option data-placeholder="true"></option> href="${arrBreedsId}">}
-              new SlimSelect({
-              select: ref.selector,
-              data: arrBreedsId,
+    {
+            return `
+          <a class="gallery__item" href="${original}">
+            <img
+              class="gallery__image"
+              src="${preview}"
+              alt="${description}"
+            />
+          </a>
+        `
           }).join('');
         }
-  }
   
 
 //   new SlimSelect({
