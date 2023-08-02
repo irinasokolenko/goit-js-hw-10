@@ -23,11 +23,11 @@ function arrBreedsId(data) {
   .join('');
 }
 function fetchBreeds() {
-  loaderRef.classList.remove('is-hidden');}
+  loaderRef.classList.remove('hide');
 
 fetchBreeds()
   .then(({data}) => {
-    breedSelectRef.classList.remove('is-hidden');
+    breedSelectRef.classList.remove('hide');
       breedSelectRef.innerHTML = markupOptions(data);
         new SlimSelect({
       select: ref.selector,
