@@ -26,14 +26,14 @@ function loadBreeds() {
   loaderRef.classList.remove('hide');}
 
 return fetchBreeds()
-  .fetchBreeds(({data}) => {
+  //.then(({data}) => {
     breedSelectRef.classList.remove('hide');
       breedSelectRef.innerHTML = markupOptions(data);
         new SlimSelect({
       select: breedSelectRef,
       settings: {},
     });
-  })
+  //})
   .catch(onFetchError);
 
 
