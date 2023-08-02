@@ -34,16 +34,16 @@ let arrBreedsId = [];
     return data.map({ text: element.name, value: element.id  });
     {
             return `
-          <a class="gallery__item" href="${original}">
-            <img
-              class="gallery__image"
-              src="${preview}"
-              alt="${description}"
-            />
-          </a>
-        `
+            <option data-placeholder="true"></option>`};
+            new SlimSelect({
+                    select: ref.selector,
+                    data: arrBreedsId,
+                  });
+                })
+                .catch(onFetchError);
+        
           }).join('');
-        }
+        
   
 
 //   new SlimSelect({
