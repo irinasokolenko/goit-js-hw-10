@@ -19,7 +19,7 @@ let arrBreedsId = [];
 
 function arrBreedsId(data) {
   return data
-  .map(({ id, name }) => `<option value=${id}>${name}</option`)
+  .map(({ id, element.name }) => `<option value=${id}>${element.name}</option`)
   .join('');
 }
 function loadBreeds() {
