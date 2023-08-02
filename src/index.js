@@ -17,6 +17,12 @@ divCatInfo.classList.add('is-hidden');
 ref.selector?.classList.add('is-hidden');
 let arrBreedsId = [];
 
+function arrBreedsId(data) {
+  return data
+  .map(({id, name}) => `<option value=${id}>${name}</option`)
+  .join('');
+}
+
 fetchBreeds()
   .then(data => {
     data.forEach(element => {
