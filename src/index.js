@@ -19,10 +19,10 @@ let arrBreedsId = [];
 
 function arrBreedsId(data) {
   return data
-  .map(({id, name}) => `<option value=${id}>${name}</option`)
+  .map(({ id, name }) => `<option value=${id}>${name}</option`)
   .join('');
 }
-function fetchBreeds() {
+function loadBreeds() {
   loaderRef.classList.remove('hide');}
 
 return fetchBreeds()
@@ -30,7 +30,7 @@ return fetchBreeds()
     breedSelectRef.classList.remove('hide');
       breedSelectRef.innerHTML = markupOptions(data);
         new SlimSelect({
-      select: ref.selector,
+      select: breedSelectRef,
       settings: {},
     });
   })
