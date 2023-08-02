@@ -15,7 +15,7 @@ loader.classList.replace('loader', 'is-hidden');
 error.classList.add('is-hidden');
 divCatInfo.classList.add('is-hidden');
 ref.selector.classList.add('loader');
-//let arrBreedsId = [];
+let arrBreedsId = [];
 
 function arrBreedsId(data) {
   return data
@@ -23,7 +23,8 @@ function arrBreedsId(data) {
   .join('');
 }
 function loadBreeds() {
-  loader.classList.remove('hide');}
+  loader.classList.remove('hide');
+
 
 return fetchBreeds()
   .then(({data}) => {
@@ -33,7 +34,7 @@ return fetchBreeds()
       select: breedSelectRef,
       settings: {},
     });
-  })
+  })}
   .catch(onFetchError);
 
 
