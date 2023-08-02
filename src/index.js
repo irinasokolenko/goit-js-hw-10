@@ -14,7 +14,7 @@ const { selector, divCatInfo, loader, error } = ref;
 loader.classList.replace('loader', 'is-hidden');
 error.classList.add('is-hidden');
 divCatInfo.classList.add('is-hidden');
-ref.selector.classList.add('is-hidden');
+ref.selector.classList.add('loader');
 let arrBreedsId = [];
 
 function arrBreedsId(data) {
