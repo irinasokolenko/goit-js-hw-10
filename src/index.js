@@ -30,16 +30,17 @@ let arrBreedsId = [];
 //   .catch(onFetchError);
 
 
-  function fetchBreeds()
-  .then(data => {
-    const arrBreedsId = map(option => {text: element.name, value: element.id});
-      
-    new SlimSelect({
-      select: ref.selector,
-      data: arrBreedsId,
-    });
-  })
-  .catch(onFetchError);
+  function fetchBreeds(){
+    return data.map({ text: element.name, value: element.id  });
+      return `<option data-placeholder="true"></option> href="${arrBreedsId}">}
+              new SlimSelect({
+              select: ref.selector,
+              data: arrBreedsId,
+          }).join('');
+        }
+  }
+  
+
 //   new SlimSelect({
 //     select: '#placeholder',
 //     settings: {
