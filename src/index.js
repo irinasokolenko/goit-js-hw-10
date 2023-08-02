@@ -23,7 +23,7 @@ function arrBreedsId(data) {
   .join('');
 }
 function loadBreeds() {
-  loaderRef.classList.remove('hide');}
+  loader.classList.remove('hide');}
 
 return fetchBreeds()
   .then(({data}) => {
