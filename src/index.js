@@ -17,6 +17,8 @@ divCatInfo.classList.add('is-hidden');
 ref.selector?.classList.add('is-hidden');
 let arrBreedsId = [];
 
+let first = false;
+
 fetchBreeds()
   .then(data => {
     data.forEach(element => {
@@ -28,8 +30,6 @@ fetchBreeds()
     });
   })
   .catch(onFetchError);
-
-let first = true;
 
 selector.addEventListener('change', onSelectBreed);
 
@@ -46,7 +46,12 @@ function onSelectBreed(event) {
       const { url, breeds } = data[0];
 
       divCatInfo.innerHTML = `<div class="box-img"><img src="${url}" alt="${breeds[0].name}" width="400"/></div><div class="box"><h1>${breeds[0].name}</h1><p>${breeds[0].description}</p><p><b>Temperament:</b> ${breeds[0].temperament}</p></div>`;
-      divCatInfo.classList.remove('is-hidden');
+
+      if (!first) {
+        first = true;
+      } else {
+        divCatInfo.classList.remove('is-hidden');
+      }
     })
     .catch(onFetchError);
 }
