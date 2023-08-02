@@ -28,7 +28,7 @@ fetchBreeds()
     });
   })
   .catch(onFetchError);
-  insertAdjacentHTML(fetchBreeds, BeforeUnloadEvent);
+
 
 let first = true;
 
