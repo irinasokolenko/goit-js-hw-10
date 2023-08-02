@@ -22,15 +22,15 @@ function arrBreedsId(data) {
   .map(({id, name}) => `<option value=${id}>${name}</option`)
   .join('');
 }
+function fetchBreeds() {
+  loaderRef.classList.remove('hide');
 
 fetchBreeds()
-  // .then(data => {
-  //   data.forEach(element => {
-  //     arrBreedsId.push({ text: element.name, value: element.id });
-  //   });
-    new SlimSelect({
+  .then(({data}) => => {
+    breedSelectRef.classList.remove('hide');
+      breedSelectRef.innerHTML = markupOptions(data);
+        new SlimSelect({
       select: ref.selector,
-      data: arrBreedsId,
     });
   })
   .catch(onFetchError);
