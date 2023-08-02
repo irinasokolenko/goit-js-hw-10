@@ -25,12 +25,13 @@ function arrBreedsId(data) {
 function fetchBreeds() {
   loader.classList.remove('hide');}
 
-fetchBreeds()
+return fetchBreeds()
   .then(({data}) => {
     breedSelectRef.classList.remove('hide');
       breedSelectRef.innerHTML = markupOptions(data);
         new SlimSelect({
       select: ref.selector,
+      settings: {},
     });
   })
   .catch(onFetchError);
