@@ -26,7 +26,7 @@ function fetchBreeds() {
   loaderRef.classList.remove('hide');
 
 fetchBreeds()
-  .then(({data}) => => {
+  .then(({data}) => {
     breedSelectRef.classList.remove('hide');
       breedSelectRef.innerHTML = markupOptions(data);
         new SlimSelect({
